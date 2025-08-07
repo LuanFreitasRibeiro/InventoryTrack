@@ -18,7 +18,7 @@ class Program
         //    new CsvInventoryRepository("inventory.csv"));
 
         // Use SQL file repository need to ensure the database file path is correct
-        //services.AddSingleton<IInventoryRepository, InventoryRepository>();
+        services.AddSingleton<IInventoryRepository, InventoryRepository>();
         services.AddSingleton<ConsoleUI>();
         services.AddSingleton<GetAllItemsUseCase>();
         services.AddSingleton<AddItemUseCase>();
