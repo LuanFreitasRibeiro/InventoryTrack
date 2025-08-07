@@ -13,12 +13,12 @@ class Program
     {
         var services = new ServiceCollection();
 
-        // Uncomment the line below to use CSV file repository
+        // uncomment the line below to use csv file repository
         //services.AddSingleton<IInventoryRepository>(provider =>
         //    new CsvInventoryRepository("inventory.csv"));
 
         // Use SQL file repository need to ensure the database file path is correct
-        services.AddSingleton<IInventoryRepository, InventoryRepository>();
+        //services.AddSingleton<IInventoryRepository, InventoryRepository>();
         services.AddSingleton<ConsoleUI>();
         services.AddSingleton<GetAllItemsUseCase>();
         services.AddSingleton<AddItemUseCase>();
